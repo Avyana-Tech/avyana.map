@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(lanelet2_extesnion)
+project(lanelet2_extension)
 
 find_package(avyana_cmake REQUIRED)
 avyana_package()
@@ -31,15 +31,34 @@ include_directories(
 add_definitions(${GeographicLib_DEFINITIONS})
 
 ament_auto_add_library(lanelet2_extension_lib SHARED
-  lib/osm_parser.cpp
+  lib/avyana_osm_parser.cpp
+  lib/avyana_traffic_light.cpp
+  lib/detection_area.cpp
+  lib/no_stopping_area.cpp
+  lib/message_conversion.cpp
+  lib/mgrs_projector.cpp
+  lib/query.cpp
+  lib/road_marking.cpp
+  lib/utilities.cpp
+  lib/virtual_traffic_light.cpp
+  lib/visualization.cpp
+  lib/route_checker.cpp
 )
 target_link_libraries(lanelet2_extension_lib
   ${GeographicLib_LIBRARIES}
 )
 
-ament_auto_add_executable(lanelet2_extension_sample src/sample.cpp)
+ament_auto_add_executable(lanelet2_extension_sample src/sample_code.cpp)
 add_dependencies(lanelet2_extension_sample lanelet2_extension_lib)
 target_link_libraries(lanelet2_extension_sample
+  lanelet2_extension_lib
+)
+
+ament_auto_add_executable(avyana_lanelet2_validation src/validation.cpp)
+add_dependencies(avyana_lanelet2_validation lanelet2_extension_lib)
+target_link_libraries(avyana_lanelet2_validation
+  ${catkin_LIBRARIES}
+  ${PUGIXML_LIBRARIES}
   lanelet2_extension_lib
 )
 
