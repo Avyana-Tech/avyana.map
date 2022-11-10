@@ -157,14 +157,14 @@ visualization_msgs::msg::MarkerArray lineStringsAsMarkerArray(
   const std_msgs::msg::ColorRGBA & c, const float lss);
 
 /**
- * [avyanaTrafficLightsAsMarkerArray creates marker array to visualize traffic
+ * [AvyanaTrafficLightsAsMarkerArray creates marker array to visualize traffic
  * lights]
  * @param  tl_reg_elems [traffic light regulatory elements]
  * @param  c            [color of the marker]
  * @param  duration     [lifetime of the marker]
  * @return              [created marker array]
  */
-visualization_msgs::msg::MarkerArray avyanaTrafficLightsAsMarkerArray(
+visualization_msgs::msg::MarkerArray AvyanaTrafficLightsAsMarkerArray(
   const std::vector<lanelet::AvyanaTrafficLightConstPtr> & tl_reg_elems,
   const std_msgs::msg::ColorRGBA & c, const rclcpp::Duration & duration = rclcpp::Duration(0, 0),
   const double scale = 1.0);

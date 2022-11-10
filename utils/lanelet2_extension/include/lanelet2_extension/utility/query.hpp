@@ -74,13 +74,13 @@ lanelet::ConstLanelets shoulderLanelets(const lanelet::ConstLanelets & lls);
 std::vector<lanelet::TrafficLightConstPtr> trafficLights(const lanelet::ConstLanelets & lanelets);
 
 /**
- * [avyanaTrafficLights extracts Avyana Traffic Light regulatory element
+ * [AvyanaTrafficLights extracts Avyana Traffic Light regulatory element
  * from lanelets]
  * @param lanelets [input lanelets]
  * @return         [avyana traffic light that are associated with input
  * lanelets]
  */
-std::vector<lanelet::AvyanaTrafficLightConstPtr> avyanaTrafficLights(
+std::vector<lanelet::AvyanaTrafficLightConstPtr> AvyanaTrafficLights(
   const lanelet::ConstLanelets & lanelets);
 
 /**

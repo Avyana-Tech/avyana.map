@@ -17,8 +17,8 @@
 #include "lanelet2_extension/utility/message_conversion.hpp"
 #include "lanelet2_extension/utility/route_checker.hpp"
 
-#include <avyana_auto_mapping_msgs/msg/had_map_bin.hpp>
-#include <avyana_auto_planning_msgs/msg/had_map_route.hpp>
+#include <avyana_auto_mapping_msgs/msg/HD_map_bin.hpp>
+#include <avyana_auto_planning_msgs/msg/HD_map_route.hpp>
 
 #include <gtest/gtest.h>
 

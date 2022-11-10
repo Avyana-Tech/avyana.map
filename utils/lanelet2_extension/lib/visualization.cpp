@@ -476,7 +476,7 @@ visualization_msgs::msg::MarkerArray visualization::laneletDirectionAsMarkerArra
   return marker_array;
 }
 
-visualization_msgs::msg::MarkerArray visualization::avyanaTrafficLightsAsMarkerArray(
+visualization_msgs::msg::MarkerArray visualization::AvyanaTrafficLightsAsMarkerArray(
   const std::vector<lanelet::AvyanaTrafficLightConstPtr> & tl_reg_elems,
   const std_msgs::msg::ColorRGBA & c, const rclcpp::Duration & duration, const double scale)
 {

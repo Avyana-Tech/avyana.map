@@ -107,7 +107,7 @@ TEST_F(TestSuite, QueryTrafficLights)  // NOLINT for gtest
   auto traffic_lights = lanelet::utils::query::trafficLights(all_lanelets);
   ASSERT_EQ(1U, traffic_lights.size()) << "failed to retrieve traffic lights";
 
-  auto avyana_traffic_lights = lanelet::utils::query::avyanaTrafficLights(all_lanelets);
+  auto avyana_traffic_lights = lanelet::utils::query::AvyanaTrafficLights(all_lanelets);
   ASSERT_EQ(1U, avyana_traffic_lights.size()) << "failed to retrieve avyana traffic lights";
 }
 

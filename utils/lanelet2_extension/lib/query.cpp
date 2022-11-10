@@ -107,7 +107,7 @@ std::vector<lanelet::TrafficLightConstPtr> query::trafficLights(
   return tl_reg_elems;
 }
 
-std::vector<lanelet::AvyanaTrafficLightConstPtr> query::avyanaTrafficLights(
+std::vector<lanelet::AvyanaTrafficLightConstPtr> query::AvyanaTrafficLights(
   const lanelet::ConstLanelets & lanelets)
 {
   std::vector<lanelet::AvyanaTrafficLightConstPtr> tl_reg_elems;
